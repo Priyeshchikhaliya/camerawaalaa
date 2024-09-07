@@ -1,5 +1,6 @@
 // Home.jsx
 import { useState } from "react";
+import { Helmet } from "react-helmet-async";
 import { ParallaxProvider, ParallaxBanner } from "react-scroll-parallax";
 import Logo from "../assets/Images/Logo.png";
 import hamburger_icon from "../assets/Icons/hamburger_icon.svg";
@@ -16,6 +17,7 @@ import instagram from "../assets/Icons/instagram.svg";
 import twitter from "../assets/Icons/twitter.svg";
 import whatsapp from "../assets/Icons/whatsapp.svg";
 import youtube from "../assets/Icons/youtube.svg";
+import mail from "../assets/Icons/mail.svg";
 
 // Sections array
 const sections = [
@@ -23,10 +25,20 @@ const sections = [
     id: 2,
     image: section2,
     text: "LIMITED EDITION PRINTS",
-    linkText: "SHOP PRINTS →",
+    linkText: "Shop Limited Edition Prints →",
   },
-  { id: 3, image: section3, text: "Section 3", linkText: "Explore More →" },
-  { id: 4, image: section4, text: "Section 4", linkText: "Discover →" },
+  {
+    id: 3,
+    image: section3,
+    text: "Explore Photography Artworks",
+    linkText: "Explore Photography Artworks →",
+  },
+  {
+    id: 4,
+    image: section4,
+    text: "Discover Video Projects",
+    linkText: "Discover Our Video Projects →",
+  },
 ];
 
 const Home = () => {
@@ -34,6 +46,26 @@ const Home = () => {
 
   return (
     <ParallaxProvider>
+      <Helmet>
+        <title>
+          Camerawaalaa | Professional Photography and Videography Portfolio
+        </title>
+        <meta
+          name="description"
+          content="Explore the portfolio of Camerawaalaa, showcasing professional photography and videography services. Discover limited edition prints, artistic video projects, and more."
+        />
+        <meta
+          property="og:title"
+          content="Camerawaalaa | Professional Photography and Videography"
+        />
+        <meta
+          property="og:description"
+          content="Explore stunning photography and videography projects by Camerawaalaa. Discover limited edition prints and more."
+        />
+        <meta property="og:image" content={section1} />
+        <meta property="og:url" content="https://yourwebsite.com" />
+      </Helmet>
+
       <div className="flex flex-col no-scrollbar">
         {/* First Section with Header */}
         <section
@@ -43,15 +75,18 @@ const Home = () => {
           {/* Header */}
           <header className="absolute top-0 left-0 right-0 md:p-8 p-0 flex items-center justify-between">
             {/* Logo */}
-            <img src={Logo} alt="Logo" className="h-[60px] w-auto cursor-pointer" />
+            <img
+              src={Logo}
+              alt="Camerawaalaa Logo"
+              className="h-[60px] w-auto cursor-pointer"
+            />
 
             {/* Hamburger Menu for Mobile */}
             <button
               className="md:hidden"
               onClick={() => setIsMenuOpen(!isMenuOpen)}
             >
-              {/* Add your hamburger icon here */}
-              <img src={hamburger_icon} alt="Menu" className="h-6 w-6" />
+              <img src={hamburger_icon} alt="Open Menu" className="h-6 w-6" />
             </button>
 
             {/* Navigation Links */}
@@ -123,7 +158,7 @@ const Home = () => {
           {/* Text Overlay */}
           <div className="absolute left-4 md:left-24 lg:left-32 bottom-1/3 transform -translate-y-1/2 text-left z-10">
             <p className="text-white text-4xl md:text-5xl lg:text-6xl font-light tracking-wider">
-              YOUTUBE
+              Explore Our YouTube Channel
             </p>
             <a
               href="https://www.youtube.com/@camerawaalaa"
@@ -131,7 +166,7 @@ const Home = () => {
               target="_blank"
               rel="noopener noreferrer"
             >
-              SEE MORE VIDS →
+              See More Videos →
             </a>
           </div>
         </section>
@@ -147,70 +182,85 @@ const Home = () => {
 
             {/* Social Media Links */}
             <div className="mt-8">
-              <p className="text-xl font-light mb-4">Follow</p>
+              <p className="text-xl font-light mb-4">
+                Follow Us on Social Media
+              </p>
               <div className="flex justify-center space-x-6 text-gray-700">
                 <a
+                  href="mailto:info@camerawaalaa.com"
+                  aria-label="Email Camerawaalaa"
+                  className="hover:text-black"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <img
+                    src={mail}
+                    alt="Email Camerawaalaa"
+                    className="h-[24px] w-[24px]"
+                  />
+                </a>
+                <a
                   href="https://www.facebook.com/camerawaalaa/?_rdr"
-                  aria-label="Facebook"
+                  aria-label="Follow on Facebook"
                   className="hover:text-black"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
                   <img
                     src={facebook}
-                    alt="Facebook Logo"
+                    alt="Follow Camerawaalaa on Facebook"
                     className="h-[24px] w-[24px]"
                   />
                 </a>
                 <a
                   href="https://www.instagram.com/camerawaalaa/"
-                  aria-label="Instagram"
+                  aria-label="Follow on Instagram"
                   className="hover:text-black"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
                   <img
                     src={instagram}
-                    alt="Instagram Logo"
+                    alt="Follow Camerawaalaa on Instagram"
                     className="h-[24px] w-[24px]"
                   />
                 </a>
                 <a
                   href="https://www.youtube.com/@camerawaalaa"
-                  aria-label="YouTube"
+                  aria-label="Subscribe on YouTube"
                   className="hover:text-black"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
                   <img
                     src={youtube}
-                    alt="YouTube Logo"
+                    alt="Subscribe to Camerawaalaa on YouTube"
                     className="h-[24px] w-[24px]"
                   />
                 </a>
                 <a
                   href="https://wa.me/4915510468109"
-                  aria-label="WhatsApp"
+                  aria-label="Chat on WhatsApp"
                   className="hover:text-black"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
                   <img
                     src={whatsapp}
-                    alt="WhatsApp Logo"
+                    alt="Chat with Camerawaalaa on WhatsApp"
                     className="h-[24px] w-[24px]"
                   />
                 </a>
                 <a
                   href="https://x.com/camerawaalaa"
-                  aria-label="Twitter"
+                  aria-label="Follow on Twitter"
                   className="hover:text-black"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
                   <img
                     src={twitter}
-                    alt="Twitter Logo"
+                    alt="Follow Camerawaalaa on Twitter"
                     className="h-[24px] w-[24px]"
                   />
                 </a>
