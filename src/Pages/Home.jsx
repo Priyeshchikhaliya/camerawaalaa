@@ -5,12 +5,12 @@ import { ParallaxProvider, ParallaxBanner } from "react-scroll-parallax";
 import Logo from "../assets/Images/Logo.png";
 import hamburger_icon from "../assets/Icons/hamburger_icon.svg";
 
-import section1 from "../assets/Images/section1.png";
-import section2 from "../assets/Images/section2.png";
-import section3 from "../assets/Images/section3.png";
-import section4 from "../assets/Images/section4.png";
+import section1 from "../assets/Images/Home/section1.jpg";
+import section2 from "../assets/Images/Home/section2.jpg";
+import section3 from "../assets/Images/Home/DSC09374.jpg";
+import section4 from "../assets/Images/Home/section4.jpg";
 
-import Video from "../assets/Videos/Video.mp4";
+import Video from "../assets/Images/Home/section5.mov";
 
 import facebook from "../assets/Icons/facebook.svg";
 import instagram from "../assets/Icons/instagram.svg";
@@ -69,7 +69,7 @@ const Home = () => {
       <div className="flex flex-col no-scrollbar">
         {/* First Section with Header */}
         <section
-          className="h-screen bg-cover bg-center relative m-0 p-0 flex items-start justify-between"
+          className="h-screen bg-cover bg-center relative m-0 p-0 flex items-start justify-between select-none"
           style={{ backgroundImage: `url(${section1})` }}
         >
           {/* Header */}
@@ -77,9 +77,20 @@ const Home = () => {
             {/* Logo */}
             <img
               src={Logo}
-              alt="Camerawaalaa Logo"
-              className="h-[60px] w-auto cursor-pointer"
+              alt="Camerawaalaa"
+              className="h-[60px] w-auto cursor-pointer absolute z-[99] left-0"
             />
+            <div className="w-full h-screen absolute top-0 left-0 opacity-40 bg-black"></div>
+            <div className="w-full h-screen absolute top-0 left-0 flex justify-center items-center">
+              <div className="text-center">
+                <p className="text-[#ffdd6c] text-[100px] leading-[80px] font-BELOGONormal">
+                  C A M E R A W A A L A A{" "}
+                </p>
+                <p className="text-[#fff] font-AileronsNormal text-[35px]">
+                  ready for the moment
+                </p>
+              </div>
+            </div>
 
             {/* Hamburger Menu for Mobile */}
             <button
@@ -90,30 +101,30 @@ const Home = () => {
             </button>
 
             {/* Navigation Links */}
-            <nav
+            {/* <nav
               className={`${
                 isMenuOpen ? "block" : "hidden"
-              } absolute md:static top-16 left-0 w-full md:w-auto md:flex space-y-4 md:space-y-0 space-x-0 md:space-x-8 bg-white md:bg-transparent p-4 md:p-0`}
+              } absolute md:static top-16 right-0 md:w-auto md:flex space-y-4 md:space-y-0 space-x-0 md:space-x-8 bg-white md:bg-transparent p-4 md:p-0 z-50 flex justify-end w-full`}
             >
               <a
                 href="#"
-                className="block md:inline text-black text-sm font-light tracking-wider hover:underline"
+                className="block md:inline text-[#ffdd6c] text-sm font-light tracking-wider hover:underline"
               >
                 SHOP
               </a>
               <a
                 href="#"
-                className="block md:inline text-black text-sm font-light tracking-wider hover:underline"
+                className="block md:inline text-[#ffdd6c] text-sm font-light tracking-wider hover:underline"
               >
                 ABOUT
               </a>
               <a
                 href="#"
-                className="block md:inline text-black text-sm font-light tracking-wider hover:underline"
+                className="block md:inline text-[#ffdd6c] text-sm font-light tracking-wider hover:underline"
               >
                 CONTACT
               </a>
-            </nav>
+            </nav> */}
           </header>
         </section>
 
@@ -129,8 +140,8 @@ const Home = () => {
             ]}
             className="h-[75vh] flex items-center justify-start bg-black bg-opacity-50 relative"
           >
-            <div className="absolute left-4 md:left-24 lg:left-32 bottom-1/3 transform -translate-y-1/2 text-left">
-              <p className="text-white text-4xl md:text-5xl lg:text-6xl font-light tracking-wider">
+            <div className="absolute left-4 md:left-24 lg:left-32 bottom-1/3 transform -translate-y-1/2 text-left font-NewakeFontNormal">
+              <p className="text-[#404040] text-4xl md:text-5xl lg:text-6xl font-light tracking-wider">
                 {section.text}
               </p>
               <a
@@ -144,7 +155,7 @@ const Home = () => {
         ))}
 
         {/* Video Section */}
-        <section className="relative h-[75vh] flex items-center justify-start bg-black bg-opacity-50">
+        <section className="relative h-[75vh] flex items-center justify-start bg-black bg-opacity-50 font-AileronsNormal">
           {/* Video Background */}
           <video
             className="absolute inset-0 w-full h-full object-cover"
@@ -157,17 +168,17 @@ const Home = () => {
 
           {/* Text Overlay */}
           <div className="absolute left-4 md:left-24 lg:left-32 bottom-1/3 transform -translate-y-1/2 text-left z-10">
-            <p className="text-white text-4xl md:text-5xl lg:text-6xl font-light tracking-wider">
+            {/* <p className="text-white text-4xl md:text-5xl lg:text-6xl font-light tracking-wider">
               Explore Our YouTube Channel
-            </p>
-            <a
+            </p> */}
+            {/* <a
               href="https://www.youtube.com/@camerawaalaa"
               className="mt-4 text-yellow-500 text-lg font-semibold underline block"
               target="_blank"
               rel="noopener noreferrer"
             >
               See More Videos →
-            </a>
+            </a> */}
           </div>
         </section>
 

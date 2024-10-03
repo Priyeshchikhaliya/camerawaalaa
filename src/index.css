@@ -4,53 +4,70 @@
 
 @font-face {
   font-family: "Futura Bold";
-  src: url("./assets/Fonts//FuturaPTBold.otf");
+  src: url("./assets/Fonts/Futura//FuturaPTBold.otf");
 }
 @font-face {
   font-family: "Futura Book";
-  src: url("./assets/Fonts//FuturaPTBook.otf");
+  src: url("./assets/Fonts/Futura//FuturaPTBook.otf");
 }
 @font-face {
   font-family: "Futura CondBold";
-  src: url("./assets/Fonts//FuturaPTCondBold.otf");
+  src: url("./assets/Fonts/Futura//FuturaPTCondBold.otf");
 }
 @font-face {
   font-family: "Futura CondBook";
-  src: url("./assets/Fonts//FuturaPTCondBook.otf");
+  src: url("./assets/Fonts/Futura//FuturaPTCondBook.otf");
 }
 @font-face {
   font-family: "Futura CondExtraBold";
-  src: url("./assets/Fonts//FuturaPTCondExtraBold.otf");
+  src: url("./assets/Fonts/Futura//FuturaPTCondExtraBold.otf");
 }
 @font-face {
   font-family: "Futura Medium";
-  src: url("./assets/Fonts//FuturaPTMedium.otf");
+  src: url("./assets/Fonts/Futura//FuturaPTMedium.otf");
 }
 @font-face {
   font-family: "Futura Demi";
-  src: url("./assets/Fonts//FuturaPTDemi.otf");
+  src: url("./assets/Fonts/Futura//FuturaPTDemi.otf");
 }
 @font-face {
   font-family: "Roboto ExtraBold";
-  src: url("./assets/Fonts//FuturaPTExtraBold.otf");
+  src: url("./assets/Fonts/Futura//FuturaPTExtraBold.otf");
 }
 @font-face {
   font-family: "Futura Heavy";
-  src: url("./assets/Fonts//FuturaPTHeavy.otf");
+  src: url("./assets/Fonts/Futura//FuturaPTHeavy.otf");
 }
 @font-face {
   font-family: "Futura Light";
-  src: url("./assets/Fonts//FuturaPTLight.otf");
+  src: url("./assets/Fonts/Futura//FuturaPTLight.otf");
 }
 @font-face {
   font-family: "Futura Medium";
-  src: url("./assets/Fonts//FuturaPTMedium.otf");
+  src: url("./assets/Fonts/Futura//FuturaPTMedium.otf");
+}
+@font-face {
+  font-family: "Ailerons Normal";
+  src: url("./assets/Fonts/Ailerons//Ailerons-Typeface.otf");
+}
+@font-face {
+  font-family: "Quahon Normal";
+  src: url("./assets/Fonts/Quahon//Quahon.otf");
+}
+@font-face {
+  font-family: "NewakeFont Normal";
+  src: url("./assets/Fonts/NewakeFont//NewakeFont-Demo.otf");
+}
+@font-face {
+  font-family: "BELOGO Normal";
+  src: url("./assets/Fonts/Belogo//BELOGO.otf");
 }
 
 .no-scrollbar {
   -ms-overflow-style: none; /* Internet Explorer 10+ */
   scrollbar-width: none; /* Firefox */
 }
+
 .no-scrollbar::-webkit-scrollbar {
   display: none; /* Safari and Chrome */
 }
