@@ -7,7 +7,7 @@ import hamburger_icon from "../assets/Icons/hamburger_icon.svg";
 
 import section1 from "../assets/Images/Home/section1.jpg";
 import section2 from "../assets/Images/Home/section2.jpg";
-import section3 from "../assets/Images/Home/DSC09374.jpg";
+import section3 from "../assets/Images/Home/section3.jpg";
 import section4 from "../assets/Images/Home/section4.jpg";
 
 import Video from "../assets/Images/Home/section5.mov";
@@ -24,20 +24,20 @@ const sections = [
   {
     id: 2,
     image: section2,
-    text: "LIMITED EDITION PRINTS",
-    linkText: "Shop Limited Edition Prints →",
+    text: "Life is better with camera",
+    linkText: "More →",
   },
   {
     id: 3,
     image: section3,
-    text: "Explore Photography Artworks",
-    linkText: "Explore Photography Artworks →",
+    text: "Things I find comfort in",
+    linkText: "More →",
   },
   {
     id: 4,
     image: section4,
-    text: "Discover Video Projects",
-    linkText: "Discover Our Video Projects →",
+    text: "A man with BIG dreams can't sleep well",
+    linkText: "More →",
   },
 ];
 
