@@ -62,6 +62,10 @@
   font-family: "BELOGO Normal";
   src: url("./assets/Fonts/Belogo//BELOGO.otf");
 }
+@font-face {
+  font-family: "mythicalRomance Normal";
+  src: url("./assets/Fonts/Mythical romance//mythical-romance.otf");
+}
 
 .no-scrollbar {
   -ms-overflow-style: none; /* Internet Explorer 10+ */

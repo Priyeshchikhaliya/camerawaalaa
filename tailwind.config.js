@@ -20,6 +20,7 @@ export default {
         QuahonNormal: ['"Quahon Normal"', "sans-serif"],
         NewakeFontNormal: ['"NewakeFont Normal"', "sans-serif"],
         BELOGONormal: ['"BELOGO Normal"', "sans-serif"],
+        mythicalRomanceNormal: ['"mythicalRomance Normal"', "sans-serif"],
       },
     },
   },

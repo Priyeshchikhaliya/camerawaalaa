@@ -62,7 +62,7 @@ const Section2 = () => (
       <div className="absolute inset-y-0 left-0 w-1/2 group">
         <div className="h-full bg-black opacity-0 group-hover:opacity-40 transition-opacity duration-300"></div>
         <div className="absolute left-4 select-none  top-0 bottom-0 flex flex-col justify-center items-end opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-          <p className="text-yellow-500 text-4xl md:text-5xl lg:text-6xl font-light tracking-wider font-NewakeFontNormal">
+          <p className="text-yellow-500 text-4xl md:text-5xl lg:text-6xl font-light tracking-wider font-mythicalRomanceNormal">
             films
           </p>
           <p className="text-yellow-500 text-lg ">
@@ -76,7 +76,7 @@ const Section2 = () => (
       <div className="absolute inset-y-0 right-0 w-1/2 group">
         <div className="h-full bg-black opacity-0 group-hover:opacity-40 transition-opacity duration-300"></div>
         <div className="absolute right-4 select-none top-0 bottom-0 flex flex-col justify-center items-start opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-          <p className="text-yellow-500 text-4xl md:text-5xl lg:text-6xl font-light tracking-wider font-NewakeFontNormal">
+          <p className="text-yellow-500 text-4xl md:text-5xl lg:text-6xl font-light tracking-wider font-mythicalRomanceNormal">
             images
           </p>
           <p className="text-yellow-500 text-lg ">
@@ -99,7 +99,7 @@ const Section3 = () => (
     ]}
     className="h-[75vh] flex items-center justify-start bg-black bg-opacity-50 relative"
   >
-    <div className="absolute left-4 select-none md:left-24 lg:left-32 bottom-1/3 transform -translate-y-1/2 text-left font-NewakeFontNormal">
+    <div className="absolute left-4 select-none md:left-24 lg:left-32 bottom-1/3 transform -translate-y-1/2 text-left font-mythicalRomanceNormal">
       <p className="text-yellow-500 text-4xl md:text-5xl lg:text-6xl font-light tracking-wider">
         Things I find comfort in
       </p>
@@ -117,7 +117,7 @@ const Section4 = () => (
     ]}
     className="h-[75vh] flex items-center justify-start bg-black bg-opacity-50 relative"
   >
-    <div className="absolute left-4 select-none md:left-24 lg:left-32 bottom-1/3 transform -translate-y-1/2 text-left font-NewakeFontNormal">
+    <div className="absolute left-4 select-none md:left-24 lg:left-32 bottom-1/3 transform -translate-y-1/2 text-left font-mythicalRomanceNormal">
       <p className="text-yellow-500 text-4xl md:text-5xl lg:text-6xl font-light tracking-wider">
         A man with BIG dreams can't sleep well
       </p>
