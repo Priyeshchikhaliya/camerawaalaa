@@ -1,4 +1,3 @@
-// Home.jsx
 import { useState } from "react";
 import { Helmet } from "react-helmet-async";
 import { ParallaxProvider, ParallaxBanner } from "react-scroll-parallax";
@@ -28,7 +27,7 @@ const Section1 = () => (
       <Link to="/home">
         <img
           src={Logo}
-          alt="Camerawaalaa"
+          alt="Camerawaalaa - Professional Photography and Videography"
           className="h-[60px] w-auto cursor-pointer absolute z-[99] left-5 top-5"
         />
       </Link>
@@ -39,7 +38,7 @@ const Section1 = () => (
             C A M E R A W A A L A A{" "}
           </p>
           <p className="text-[#fff] font-AileronsNormal text-[35px]">
-            ready for the moment
+            Ready for the moment
           </p>
         </div>
       </div>
@@ -51,19 +50,18 @@ const Section2 = () => (
   <ParallaxBanner
     layers={[
       {
-        image: section2, // Use one seamless background image
-        speed: -30, // Parallax speed
+        image: section2,
+        speed: -30,
       },
     ]}
     className="relative w-full h-[75vh] bg-cover bg-no-repeat bg-center"
   >
-    {/* Left Section with Overlay */}
     <Link to="/films" className="text-yellow-500 text-lg ">
       <div className="absolute inset-y-0 left-0 w-1/2 group">
         <div className="h-full bg-black opacity-0 group-hover:opacity-40 transition-opacity duration-300"></div>
         <div className="absolute left-4 select-none  top-0 bottom-0 flex flex-col justify-center items-end opacity-0 group-hover:opacity-100 transition-opacity duration-300">
           <p className="text-yellow-500 text-4xl md:text-5xl lg:text-6xl font-light tracking-wider font-mythicalRomanceNormal">
-            films
+            Films
           </p>
           <p className="text-yellow-500 text-lg ">
             In every frame, a story unfolds, captured in time for eternity.
@@ -71,13 +69,12 @@ const Section2 = () => (
         </div>
       </div>
     </Link>
-    {/* Right Section with Overlay */}
     <Link to="/images" className="text-yellow-500 text-lg ">
       <div className="absolute inset-y-0 right-0 w-1/2 group">
         <div className="h-full bg-black opacity-0 group-hover:opacity-40 transition-opacity duration-300"></div>
         <div className="absolute right-4 select-none top-0 bottom-0 flex flex-col justify-center items-start opacity-0 group-hover:opacity-100 transition-opacity duration-300">
           <p className="text-yellow-500 text-4xl md:text-5xl lg:text-6xl font-light tracking-wider font-mythicalRomanceNormal">
-            images
+            Images
           </p>
           <p className="text-yellow-500 text-lg ">
             Each image, a whisper of life’s fleeting beauty, frozen in
@@ -220,25 +217,17 @@ const Home = () => {
         />
         <meta property="og:image" content={section1} />
         <meta property="og:url" content="https://yourwebsite.com" />
+        <meta name="robots" content="index, follow" />
+        <meta name="author" content="Camerawaalaa" />
+        <link rel="canonical" href="https://yourwebsite.com" />
       </Helmet>
 
       <div className="flex flex-col no-scrollbar">
-        {/* Section 1 */}
         <Section1 />
-
-        {/* Section 2 */}
         <Section2 />
-
-        {/* Section 3 */}
         <Section3 />
-
-        {/* Section 4 */}
         <Section4 />
-
-        {/* Video Section */}
         <VideoSection />
-
-        {/* Footer */}
         <Footer />
       </div>
     </ParallaxProvider>
