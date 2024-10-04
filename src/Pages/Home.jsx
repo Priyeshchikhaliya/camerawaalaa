@@ -2,7 +2,7 @@
 import { useState } from "react";
 import { Helmet } from "react-helmet-async";
 import { ParallaxProvider, ParallaxBanner } from "react-scroll-parallax";
-import Logo from "../assets/Images/Logo.png";
+import Logo from "../assets/Images/logo.png";
 import hamburger_icon from "../assets/Icons/hamburger_icon.svg";
 
 import section1 from "../assets/Images/Home/section1.jpg";
@@ -78,7 +78,7 @@ const Home = () => {
             <img
               src={Logo}
               alt="Camerawaalaa"
-              className="h-[60px] w-auto cursor-pointer absolute z-[99] left-0"
+              className="h-[60px] w-auto cursor-pointer absolute z-[99] left-5 top-5"
             />
             <div className="w-full h-screen absolute top-0 left-0 opacity-40 bg-black"></div>
             <div className="w-full h-screen absolute top-0 left-0 flex justify-center items-center">
