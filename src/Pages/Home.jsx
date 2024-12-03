@@ -1,8 +1,6 @@
-import { useState } from "react";
 import { Helmet } from "react-helmet-async";
 import { ParallaxProvider, ParallaxBanner } from "react-scroll-parallax";
 import Logo from "../assets/Images/logo.png";
-import hamburger_icon from "../assets/Icons/hamburger_icon.svg";
 
 import section1 from "../assets/Images/Home/section1.jpg";
 import section2 from "../assets/Images/Home/section2.jpg";
@@ -10,13 +8,8 @@ import section3 from "../assets/Images/Home/section3.jpg";
 import section4 from "../assets/Images/Home/section4.jpg";
 import Video from "../assets/Images/Home/section5.mov";
 
-import facebook from "../assets/Icons/facebook.svg";
-import instagram from "../assets/Icons/instagram.svg";
-import twitter from "../assets/Icons/twitter.svg";
-import whatsapp from "../assets/Icons/whatsapp.svg";
-import youtube from "../assets/Icons/youtube.svg";
-import mail from "../assets/Icons/mail.svg";
 import { Link } from "react-router-dom";
+import Layout from "../components/Layout";
 
 const Section1 = () => (
   <section
@@ -123,7 +116,7 @@ const Section4 = () => (
   >
     <div className="absolute left-4 select-none md:left-24 lg:left-32 bottom-1/3 transform -translate-y-1/2 text-left font-mythicalRomanceNormal">
       <p className="text-yellow-500 text-4xl md:text-5xl lg:text-6xl font-light tracking-wider">
-        A man with BIG dreams can't sleep well
+        A man with BIG dreams can&apos;t sleep well
       </p>
     </div>
   </ParallaxBanner>
@@ -142,68 +135,7 @@ const VideoSection = () => (
   </section>
 );
 
-const Footer = () => (
-  <section className="h-[50vh] flex justify-center items-center">
-    <div className="bg-white py-16 px-8 text-center">
-      <h2 className="text-xl font-semibold mb-2">Join Our Journey</h2>
-      <p className="text-gray-500 mb-6">
-        Stay updated with our latest projects and adventures.
-      </p>
-
-      <div className="mt-8">
-        <p className="text-xl font-light mb-4">Follow Us on Social Media</p>
-        <div className="flex justify-center space-x-6 text-gray-700">
-          <a href="mailto:info@camerawaalaa.com">
-            <img
-              src={mail}
-              alt="Email Camerawaalaa"
-              className="h-[24px] w-[24px]"
-            />
-          </a>
-          <a href="https://www.facebook.com/camerawaalaa/?_rdr">
-            <img
-              src={facebook}
-              alt="Follow Camerawaalaa on Facebook"
-              className="h-[24px] w-[24px]"
-            />
-          </a>
-          <a href="https://www.instagram.com/camerawaalaa/">
-            <img
-              src={instagram}
-              alt="Follow Camerawaalaa on Instagram"
-              className="h-[24px] w-[24px]"
-            />
-          </a>
-          <a href="https://www.youtube.com/@camerawaalaa">
-            <img
-              src={youtube}
-              alt="Subscribe to Camerawaalaa on YouTube"
-              className="h-[24px] w-[24px]"
-            />
-          </a>
-          <a href="https://wa.me/4915510468109">
-            <img
-              src={whatsapp}
-              alt="Chat with Camerawaalaa on WhatsApp"
-              className="h-[24px] w-[24px]"
-            />
-          </a>
-          <a href="https://x.com/camerawaalaa">
-            <img
-              src={twitter}
-              alt="Follow Camerawaalaa on Twitter"
-              className="h-[24px] w-[24px]"
-            />
-          </a>
-        </div>
-      </div>
-    </div>
-  </section>
-);
-
 const Home = () => {
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
-
   return (
     <ParallaxProvider>
       <Helmet>
@@ -228,15 +160,15 @@ const Home = () => {
         <meta name="author" content="Camerawaalaa" />
         <link rel="canonical" href="https://yourwebsite.com" />
       </Helmet>
-
-      <div className="flex flex-col no-scrollbar">
-        <Section1 />
-        <Section2 />
-        <Section3 />
-        <Section4 />
-        <VideoSection />
-        <Footer />
-      </div>
+      <Layout>
+        <div className="flex flex-col no-scrollbar">
+          <Section1 />
+          <Section2 />
+          <Section3 />
+          <Section4 />
+          <VideoSection />
+        </div>
+      </Layout>
     </ParallaxProvider>
   );
 };

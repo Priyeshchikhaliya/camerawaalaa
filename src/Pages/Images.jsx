@@ -1,7 +1,7 @@
 import section from "../assets/Images/Home/section.jpg";
 import Layout from "../components/Layout";
 
-const Films = () => {
+const Images = () => {
   return (
     <Layout>
       <div
@@ -10,7 +10,7 @@ const Films = () => {
       >
         {/* Optional Content Overlay */}
         <div className="text-center text-black">
-          <h1 className="text-5xl font-bold mb-4">Films Gallery</h1>
+          <h1 className="text-5xl font-bold mb-4">Photo Gallery</h1>
           <p className="text-lg italic">
             Captured moments, frozen in time, to relive again.
           </p>
@@ -20,4 +20,4 @@ const Films = () => {
   );
 };
 
-export default Films;
+export default Images;

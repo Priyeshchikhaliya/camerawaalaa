@@ -5,34 +5,26 @@ import {
   Routes,
 } from "react-router-dom";
 import Home from "../Pages/Home";
-import Photos from "../Pages/Photos";
 import Films from "../Pages/Films";
-import PhotoCategory from "../Pages/PhotoCategory"; // Component for handling categories under Photos
+import Images from "../Pages/Images";
+import ImageCategory from "../Pages/ImageCategory";
+import About from "../Pages/About";
+import Review from "../Pages/Review";
+import Contact from "../Pages/Contact";
 
 function PublicRoute() {
   return (
     <Router>
       <Routes>
-        {/* Redirect any undefined routes to "/" */}
         <Route path="*" element={<Navigate to="/" />} />
-
-        {/* Redirect from "/" to "/home" */}
         <Route path="/" element={<Navigate to="/home" />} />
-
-        {/* Home route */}
         <Route path="/home" element={<Home />} />
-
-        {/* Photos route */}
-        <Route path="/images" element={<Photos />} />
-
-        {/* Dynamic category route under /photos */}
-        <Route
-          path="/images/:category"
-          element={<PhotoCategory />}
-        />
-
-        {/* Films route */}
         <Route path="/films" element={<Films />} />
+        <Route path="/images" element={<Images />} />
+        <Route path="/images/:category" element={<ImageCategory />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/review" element={<Review />} />
+        <Route path="/contact" element={<Contact />} />
       </Routes>
     </Router>
   );
