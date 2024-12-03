@@ -57,7 +57,7 @@ const Section2 = () => (
         {/* Text content with reversed alignment for mobile */}
         <div className="absolute left-4 right-4 select-none top-0 bottom-0 flex flex-col justify-center opacity-100 md:opacity-0 md:group-hover:opacity-100 transition-opacity duration-300">
           <p className="text-yellow-500 text-4xl md:text-5xl lg:text-6xl font-light tracking-wider md:text-right text-left font-mythicalRomanceNormal md:border-none border-r border-r-yellow-500 w-full">
-            Films
+            films
           </p>
           <p className="text-white text-lg md:text-right text-left">
             In every frame, a story unfolds, captured in time for eternity.
@@ -74,7 +74,7 @@ const Section2 = () => (
         {/* Text content with reversed alignment for mobile */}
         <div className="absolute right-4 left-4 select-none top-0 bottom-0 flex flex-col justify-center md:items-start items-end opacity-100 md:opacity-0 md:group-hover:opacity-100 transition-opacity duration-300">
           <p className="text-yellow-500 text-4xl md:text-5xl md:text-left text-right lg:text-6xl font-light tracking-wider font-mythicalRomanceNormal">
-            Images
+            images
           </p>
           <p className="text-white text-lg md:text-left text-right">
             Each image, a whisper of life’s fleeting beauty, frozen in
