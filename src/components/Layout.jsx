@@ -83,7 +83,7 @@ const Layout = ({ children }) => {
           isMenuOpen ? "translate-x-0" : "translate-x-full"
         }`}
       >
-        <div className="h-full flex flex-row-reverse items-center justify-between px-8 md:px-16">
+        <div className="h-full flex flex-row-reverse items-center justify-between px-8 md:px-16 select-none">
           <div className="md:w-1/2 w-full md:pl-8 pt-24 md:pt-0">
             <nav className="space-y-6">
               {menuItems.map((item, index) => (
