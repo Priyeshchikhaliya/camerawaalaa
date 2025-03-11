@@ -16,42 +16,42 @@ const Footer = () => (
       <div className="mt-8">
         <p className="text-xl font-light mb-4">Follow Us on Social Media</p>
         <div className="flex justify-center space-x-6 text-gray-700">
-          <a href="mailto:info@camerawaalaa.com">
+          <a target="_blank" href="mailto:info@camerawaalaa.com">
             <img
               src={mail}
               alt="Email Camerawaalaa"
               className="h-[24px] w-[24px]"
             />
           </a>
-          <a href="https://www.facebook.com/camerawaalaa/?_rdr">
+          <a target="_blank" href="https://www.facebook.com/camerawaalaa/?_rdr">
             <img
               src={facebook}
               alt="Follow Camerawaalaa on Facebook"
               className="h-[24px] w-[24px]"
             />
           </a>
-          <a href="https://www.instagram.com/camerawaalaa/">
+          <a target="_blank" href="https://www.instagram.com/camerawaalaa/">
             <img
               src={instagram}
               alt="Follow Camerawaalaa on Instagram"
               className="h-[24px] w-[24px]"
             />
           </a>
-          <a href="https://www.youtube.com/@camerawaalaa">
+          <a target="_blank" href="https://www.youtube.com/@camerawaalaa">
             <img
               src={youtube}
               alt="Subscribe to Camerawaalaa on YouTube"
               className="h-[24px] w-[24px]"
             />
           </a>
-          <a href="https://wa.me/4915510468109">
+          <a target="_blank" href="https://wa.me/4915510468109">
             <img
               src={whatsapp}
               alt="Chat with Camerawaalaa on WhatsApp"
               className="h-[24px] w-[24px]"
             />
           </a>
-          <a href="https://x.com/camerawaalaa">
+          <a target="_blank" href="https://x.com/camerawaalaa">
             <img
               src={twitter}
               alt="Follow Camerawaalaa on Twitter"
