@@ -1,7 +1,7 @@
 import facebook from "../assets/Icons/facebook.svg";
 import instagram from "../assets/Icons/instagram.svg";
 import twitter from "../assets/Icons/twitter.svg";
-import whatsapp from "../assets/Icons/whatsapp.svg";
+// import whatsapp from "../assets/Icons/whatsapp.svg";
 import youtube from "../assets/Icons/youtube.svg";
 import mail from "../assets/Icons/mail.svg";
 
