@@ -7,7 +7,7 @@ import mail from "../assets/Icons/mail.svg";
 
 const Footer = () => (
   <section className="h-[50vh] flex justify-center items-center">
-    <div className="bg-white py-16 px-8 text-center  h-full w-full">
+    <div className="bg-white py-16 px-8 text-center  h-full w-full select-none">
       <h2 className="text-xl font-semibold mb-2">Join Our Journey</h2>
       <p className="text-gray-500 mb-6">
         Stay updated with our latest projects and adventures.
