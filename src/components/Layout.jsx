@@ -42,7 +42,7 @@ const Layout = ({ children }) => {
     {
       link: "/contact",
       text: "Contact",
-      description: "Let&apos;s create something extraordinary together.",
+      description: "Let's create something extraordinary together.",
     },
   ];
 

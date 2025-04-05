@@ -1,20 +1,27 @@
 import { Helmet } from "react-helmet-async";
+import { useEffect, useState } from "react";
 import { ParallaxProvider, ParallaxBanner } from "react-scroll-parallax";
 import Logo from "../assets/Images/logo.png";
-
-import section1 from "../assets/Images/Home/section1.jpg";
-import section2 from "../assets/Images/Home/section2.jpg";
-import section3 from "../assets/Images/Home/section3.jpg";
-import section4 from "../assets/Images/Home/section4.jpg";
-import Video from "../assets/Images/Home/section5.mov";
-
 import { Link } from "react-router-dom";
 import Layout from "../components/Layout";
+
+// Using environment variables for S3 assets
+const s3BaseUrl = import.meta.env.VITE_S3_BASE_HOME_URL;
+const section1 = `${s3BaseUrl}/section1.jpg`;
+const section2 = `${s3BaseUrl}/section2.jpg`;
+const section3 = `${s3BaseUrl}/section3.jpg`;
+const section4 = `${s3BaseUrl}/section4.jpg`;
+const videoUrl = `${s3BaseUrl}/section5.mov`;
+
+// Array of all images for preloading
+const imagesToPreload = [section1, section2, section3, section4];
 
 const Section1 = () => (
   <section
     className="h-screen bg-cover bg-center relative m-0 p-0 flex items-start justify-between select-none"
-    style={{ backgroundImage: `url(${section1})` }}
+    style={{
+      backgroundImage: `url(${section1})`,
+    }}
   >
     <header className="absolute top-0 left-0 right-0 md:p-8 p-0 flex items-center justify-between">
       <Link to="/home">
@@ -77,7 +84,7 @@ const Section2 = () => (
             images
           </p>
           <p className="text-white text-lg md:text-left text-right">
-            Each image, a whisper of life’s fleeting beauty, frozen in
+            Each image, a whisper of life&apos;s fleeting beauty, frozen in
             stillness.
           </p>
         </div>
@@ -126,16 +133,49 @@ const VideoSection = () => (
   <section className="relative h-[75vh] flex items-center justify-start bg-black bg-opacity-50 font-AileronsNormal">
     <video
       className="absolute inset-0 w-full h-full object-cover"
-      src={Video}
+      src={videoUrl}
       autoPlay
       muted
       loop
       playsInline
+      preload="auto"
     ></video>
   </section>
 );
 
 const Home = () => {
+  const [imagesLoaded, setImagesLoaded] = useState(false);
+
+  // Preload images
+  useEffect(() => {
+    let loadedCount = 0;
+    const totalImages = imagesToPreload.length;
+
+    // Function to mark when all images are loaded
+    const imageLoaded = () => {
+      loadedCount++;
+      if (loadedCount === totalImages) {
+        setImagesLoaded(true);
+      }
+    };
+
+    // Preload all images
+    imagesToPreload.forEach((src) => {
+      const img = new Image();
+      img.src = src;
+      img.onload = imageLoaded;
+      img.onerror = imageLoaded; // Count errors as "loaded" to avoid blocking
+    });
+
+    // If images take too long, show content anyway
+    const timer = setTimeout(() => {
+      setImagesLoaded(true);
+    }, 3000);
+
+    // Clean up
+    return () => clearTimeout(timer);
+  }, []);
+
   return (
     <ParallaxProvider>
       <Helmet>
@@ -147,6 +187,10 @@ const Home = () => {
           content="Explore the portfolio of Camerawaalaa, showcasing professional photography and videography services. Discover limited edition prints, artistic video projects, and more."
         />
         <meta
+          name="keywords"
+          content="photography, videography, camerawaalaa, portfolio, india, professional photographer"
+        />
+        <meta
           property="og:title"
           content="Camerawaalaa | Professional Photography and Videography"
         />
@@ -155,19 +199,38 @@ const Home = () => {
           content="Explore stunning photography and videography projects by Camerawaalaa. Discover limited edition prints and more."
         />
         <meta property="og:image" content={section1} />
-        <meta property="og:url" content="https://yourwebsite.com" />
+        <meta property="og:url" content="https://camerawaalaa.com" />
+        <meta property="og:type" content="website" />
+        <meta name="twitter:card" content="summary_large_image" />
         <meta name="robots" content="index, follow" />
         <meta name="author" content="Camerawaalaa" />
-        <link rel="canonical" href="https://yourwebsite.com" />
+        <link rel="canonical" href="https://camerawaalaa.com" />
+
+        {/* Preload critical assets */}
+        <link rel="preload" as="image" href={section1} />
+        <link rel="preload" as="image" href={Logo} />
       </Helmet>
       <Layout>
-        <div className="flex flex-col no-scrollbar">
+        <div
+          className={`flex flex-col no-scrollbar ${
+            !imagesLoaded
+              ? "opacity-0"
+              : "opacity-100 transition-opacity duration-500"
+          }`}
+        >
           <Section1 />
           <Section2 />
           <Section3 />
           <Section4 />
           <VideoSection />
         </div>
+        {!imagesLoaded && (
+          <div className="fixed inset-0 flex items-center justify-center bg-black">
+            <div className="text-yellow-500 text-2xl">
+              Loading amazing visuals...
+            </div>
+          </div>
+        )}
       </Layout>
     </ParallaxProvider>
   );
