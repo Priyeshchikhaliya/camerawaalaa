@@ -44,13 +44,13 @@ const Footer = () => (
               className="h-[24px] w-[24px]"
             />
           </a>
-          <a target="_blank" href="https://wa.me/4915510468109">
+          {/* <a target="_blank" href="https://wa.me/4915510468109">
             <img
               src={whatsapp}
               alt="Chat with Camerawaalaa on WhatsApp"
               className="h-[24px] w-[24px]"
             />
-          </a>
+          </a> */}
           <a target="_blank" href="https://x.com/camerawaalaa">
             <img
               src={twitter}

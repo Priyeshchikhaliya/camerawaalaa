@@ -11,7 +11,7 @@ const section1 = `${s3BaseUrl}/section1.jpg`;
 const section2 = `${s3BaseUrl}/section2.jpg`;
 const section3 = `${s3BaseUrl}/section3.jpg`;
 const section4 = `${s3BaseUrl}/section4.jpg`;
-const videoUrl = `${s3BaseUrl}/section5.mov`;
+const videoUrl = `${s3BaseUrl}/section5.mp4`;
 
 // Array of all images for preloading
 const imagesToPreload = [section1, section2, section3, section4];
