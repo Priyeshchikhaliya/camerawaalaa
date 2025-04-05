@@ -1,4 +1,4 @@
-import section from "../assets/Images/Home/section.jpg";
+import section from "../assets/Images/section.jpg";
 import Layout from "../components/Layout";
 
 const Films = () => {
