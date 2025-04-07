@@ -24,13 +24,13 @@ const Section1 = () => (
     }}
   >
     <header className="absolute top-0 left-0 right-0 md:p-8 p-0 flex items-center justify-between">
-      <Link to="/home">
+      {/* <Link to="/home">
         <img
           src={Logo}
           alt="Camerawaalaa - Professional Photography and Videography"
           className="h-[60px] w-auto cursor-pointer absolute z-[99] left-5 top-5"
         />
-      </Link>
+      </Link> */}
       <div className="w-full h-screen absolute top-0 left-0 opacity-40 bg-black"></div>
       <div className="w-full h-screen absolute top-0 left-0 flex justify-center items-center">
         <div className="text-center">
