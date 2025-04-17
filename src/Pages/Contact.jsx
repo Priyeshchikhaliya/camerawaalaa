@@ -40,7 +40,8 @@ function Contact() {
           from_name: formData.name || "Website Visitor",
           from_email: formData.email,
           message: formData.message,
-        }
+        },
+        import.meta.env.VITE_EMAILJS_USER_ID // Public key
       );
 
       if (response.status === 200) {
